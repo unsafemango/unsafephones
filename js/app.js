@@ -208,6 +208,7 @@ class UI {
     this.setCartValues(cart);
     Storage.saveCart(cart);
     let button = this.getSingleButton(id);
+    console.log(button);
     button.disabled = false;
     button.classList.remove("disabled");
     button.innerHTML = '<i class="fas fa-shopping-cart"></i>add to cart';

@@ -1,4 +1,3 @@
-# unsafephones
+# UNSAFEPHONES
 
-A phone shopping cart with filter buttons developed with javascript
-A phone shopping cart with filter buttons developed with javascript
+Simple phone shopping cart with filter buttons developed with vanilla javascript

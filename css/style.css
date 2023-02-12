@@ -126,6 +126,7 @@ nav .cart-btn .cart-item-count {
   border: 1px solid var(--primaryColor);
   transition: var(--mainTransition);
   cursor: pointer;
+  border-radius: 7px;
 }
 
 .banner-btn:hover,
@@ -140,8 +141,10 @@ nav .cart-btn .cart-item-count {
   margin: 1rem auto;
   width: 50%;
   margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  column-gap: 1rem;
+  justify-content: center;
 }
 
 .filter-btn {
@@ -186,9 +189,10 @@ nav .cart-btn .cart-item-count {
   width: 90%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-column-gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(260px, 332px));
+  grid-column-gap: 4rem;
   grid-row-gap: 2rem;
+  justify-content: center;
 }
 
 .product {
@@ -362,3 +366,84 @@ nav .cart-btn .cart-item-count {
 }
 
 /* --------- END OF CART --------- */
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(14, 20%, 66%);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: hsl(14, 20%, 50%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 0.5rem;
+  background-color: hsl(14, 20%, 40%);
+}
+
+/* LARGE SCREENS */
+@media screen and (max-width: 1200px) {
+  .banner-container {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .banner-title {
+    font-size: 3rem;
+  }
+
+  .banner-btn,
+  .clear-cart {
+    padding: 1rem 2rem;
+  }
+
+  .products-center {
+    grid-template-columns: repeat(2, minmax(260px, 332px));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav header a .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner {
+    padding: 1rem;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner-btn,
+  .clear-cart {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .filter-container {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+
+  .products-center {
+    grid-template-columns: repeat(1, minmax(260px, 332px));
+  }
+}
