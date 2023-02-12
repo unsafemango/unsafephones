@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--mainBlack);
   font-family: "Roboto", sans-serif;
@@ -127,6 +131,11 @@ nav .cart-btn .cart-item-count {
   transition: var(--mainTransition);
   cursor: pointer;
   border-radius: 7px;
+}
+
+.banner-btn {
+  text-decoration: none;
+  color: #fff;
 }
 
 .banner-btn:hover,
